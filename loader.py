@@ -99,7 +99,7 @@ def getCloud(dataArray):
         zData = np.zeros((numCoils, n_data))
         
         for nr in range(0, n_data - 1):
-            for i in range(0,numcoils):
+            for i in range(0, numCoils):
                 xData[i, nr] = (dataArray[nr, i2])
                 yData[i, nr] = (dataArray[nr, i2 + 1])
                 zData[i, nr] = (dataArray[nr, i2 + 2])
