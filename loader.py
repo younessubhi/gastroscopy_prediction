@@ -19,7 +19,7 @@ def ToMilSecs(dateVect):
     secs = dateVect[2]
     milsecs = dateVect[3]
     
-    return milisecs + 1000 * (secs + 60 * (mins + hours * 60))
+    return milsecs + 1000 * (secs + 60 * (mins + hours * 60))
 
 def ReformatRow(row):
     # reformat  the rows into desirable format
@@ -123,17 +123,17 @@ for i in range(0, no_series):
     
     result_dir = result_ls[file_no]
 #    result = result_dir.split("\\")[1]
- #   result_dir = result_loc + "\\" + result + "\\"
+#    result_dir = result_loc + "\\" + result + "\\"
     
     # load corrected file
-    data_dir = result_dir + "corrected.csv"
+    data_dir = result_dir + "/corrected.csv"
     
     scs_dir = result_dir + "/scs.txt"
     scs_file = open(scs_dir, 'r')
     
     content = scs_file.readline().split(";")
     
-    scs.file.close()
+    scs_file.close()
     
     start = int(float(content[0]))
     cecum = int(float(content[2])) - start
