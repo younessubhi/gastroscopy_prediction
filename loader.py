@@ -173,6 +173,6 @@ for i in range(0, no_series):
     
     # construct individual matrices for coordinates (x,y,z)
     # with shape [numCoils, numDataPoints]
-    x.y,z = getCloud(dataArray)
+    x,y,z = getCloud(dataArray)
 
     
