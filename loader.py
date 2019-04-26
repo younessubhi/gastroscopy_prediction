@@ -72,7 +72,7 @@ def getData(control = 0, dataFile = None):
             for row in filereader:
                 data.append(row)
                 
-    dataArray = np.empty((len(data) -1, len(data[0]])))
+    dataArray = np.empty((len(data) -1, len(data[0])))
     
     # first row is attributes and rest is data
     for i, row in enumerate(data):
@@ -93,7 +93,7 @@ def getData(control = 0, dataFile = None):
 def getCloud(dataArray):
         # get all (x,y,z), every coil, throughout whole procedure
         numCoils = 19
-        n_data = len(dataArray[:,1]))
+        n_data = len(dataArray[:,1])
         xData = np.zeros((numCoils, n_data))
         yData = np.zeros((numCoils, n_data))
         zData = np.zeros((numCoils, n_data))
@@ -101,15 +101,15 @@ def getCloud(dataArray):
         for nr in range(0, n_data - 1):
             for i in range(0,numcoils):
                 xData[i, nr] = (dataArray[nr, i2])
-                yData[i, nr] = (dataArray[nr, i2 + 1]]
-                zData[i, nr] = (dataArray[nr, i2 + 2]]
+                yData[i, nr] = (dataArray[nr, i2 + 1])
+                zData[i, nr] = (dataArray[nr, i2 + 2])
     
-    return xData, yData, zData
+        return xData, yData, zData
 
 #%% Script
     
 result_loc = "/CoPS_data"
-result_ls = [result_loc "\\" + name for name in os.listdir(result_loc) if (os.path.isdir(os.path.join(result_loc, name)) and name != "analyzed")
+result_ls = [result_loc + "\\" + name for name in os.listdir(result_loc) if (os.path.isdir(os.path.join(result_loc, name)) and name != "analyzed")]
 
 print("folder " + result_loc + "\n")
 print(result_loc)
@@ -137,7 +137,7 @@ for i in range(0, no_series):
     
     start = int(float(content[0]))
     cecum = int(float(content[2])) - start
-    stop = int(float(content[4]])) - start
+    stop = int(float(content[4])) - start
     
     # print filename
     print("\n filepath:\n " + result + "\n")
