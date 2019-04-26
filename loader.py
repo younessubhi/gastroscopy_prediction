@@ -100,6 +100,7 @@ def getCloud(dataArray):
         
         for nr in range(0, n_data - 1):
             for i in range(0, numCoils):
+                i2 = 1 + i * 6
                 xData[i, nr] = (dataArray[nr, i2])
                 yData[i, nr] = (dataArray[nr, i2 + 1])
                 zData[i, nr] = (dataArray[nr, i2 + 2])
