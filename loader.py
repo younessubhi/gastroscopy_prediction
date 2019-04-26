@@ -108,22 +108,22 @@ def getCloud(dataArray):
 
 #%% Script
     
-result_loc = "/CoPS_data"
-result_ls = [result_loc + "\\" + name for name in os.listdir(result_loc) if (os.path.isdir(os.path.join(result_loc, name)) and name != "analyzed")]
+result_loc = "/Users/younessubhi/Documents/GitHub/gastroscopy_prediction/CoPS_data/"
+result_ls = [result_loc + name for name in os.listdir(result_loc) if (os.path.isdir(os.path.join(result_loc, name)) and name != "analyzed")]
 
 print("folder " + result_loc + "\n")
 print(result_loc)
 
-no_series = len(result_list)
+no_series = len(result_ls)
 
 for i in range(0, no_series):
     file_no = int(no_series - i - 1)
     
     print(file_no)
     
-    result_dir = result_list[file_no]
-    result = result_dir.split("\\")[1]
-    result_dir = result_loc + "\\" + result + "\\"
+    result_dir = result_ls[file_no]
+#    result = result_dir.split("\\")[1]
+ #   result_dir = result_loc + "\\" + result + "\\"
     
     # load corrected file
     data_dir = result_dir + "corrected.csv"
