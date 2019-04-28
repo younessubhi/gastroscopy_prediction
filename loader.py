@@ -123,8 +123,9 @@ for i in range(0, no_series):
     print(file_no)
     
     result_dir = result_ls[file_no]
-#    result = result_dir.split("\\")[1]
-#    result_dir = result_loc + "\\" + result + "\\"
+    result = result_dir.split()[0:]
+    result = ' '.join(result)
+    result_dir = result
     
     # load corrected file
     data_dir = result_dir + "/corrected.csv"
@@ -175,4 +176,6 @@ for i in range(0, no_series):
     # with shape [numCoils, numDataPoints]
     x,y,z = getCloud(dataArray)
 
-    
+# save into file
+
+numpy.savetxt("xyzdata.csv", dataArray, delimiter=",")
