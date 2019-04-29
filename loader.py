@@ -178,4 +178,4 @@ for i in range(0, no_series):
 
 # save into file
 
-numpy.savetxt("xyzdata.csv", dataArray, delimiter=",")
+np.savetxt("xyzdata.csv", dataArray, delimiter=",")
