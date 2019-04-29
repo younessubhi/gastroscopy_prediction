@@ -176,6 +176,6 @@ for i in range(0, no_series):
     # with shape [numCoils, numDataPoints]
     x,y,z = getCloud(dataArray)
 
-# save into file
+    # save into file
 
-np.savetxt("xyzdata.csv", dataArray, delimiter=",")
+    np.savetxt("xyz_data%.f.csv" %i, dataArray, delimiter=",")
